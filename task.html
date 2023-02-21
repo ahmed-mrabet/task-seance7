@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="./task.css">
+</head>
+ <body>
+   
+    
+        <div id="root"></div>
+        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script> 
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+      <script type="text/babel">
+      let page =()=>{
+        return(
+            <div id='body'>
+             <div className='box'>
+             <Header/>
+             <Button/>           
+            </div>
+                <main>
+                    <div id='box2'>
+                        <Image1/>
+                    <div id='text'>
+                        <b><Typography 
+                    text={"Interview — What it’s like to work remotely in big-sized product development?"}/></b>
+                        <br/>
+                    <Typography
+                    text={"People say that developing products isn’t easy. Neither it is to build long-distance relationships. But, how about doing both, simultaneously?"}/> 
+
+                   <div id='text2'>
+                    <div id="image2"></div>
+                    <div><b><Typography 
+                    text={"Bruno Teixeira"}/></b>
+                        <br/>
+                    <Typography
+                    text={"Head of Product"}/></div>
+                    
+
+                    </div>
+                    
+                    </div>
+                        </div>
+                        <div id="box3">
+                        <div id ='card1'>
+                            <Image3/>
+                            <b><Typography 
+                    text={"Hybrid vs. Native — Here is how you can choose one over the other…"}/></b>
+                        <br/>
+                        <Typography
+                    text={" There is no denying it, hybrid mobile development is booming and becoming the main option when considering developing a mobile application due to the lower costs and faster development time. But what are the implications of going for a hybrid approach instead of a native one? What are the advantages and disadvantages of choosing one of the approaches?"}/>
+                       
+                            
+                            </div>
+                        <div id='card2'>
+                            <Image4/>
+                            <b><Typography 
+                    text={"From monolithic to headless: how and why you should adapt your WordPress stack"}/></b>
+                    <Typography
+                    text={"Every dynamic website consists of two main parts: the backend and the frontend. The backend, which in marketing websites is commonly a Content Management System (CMS), allows the website owners to manage as much content as needed without handling code changes. The frontend displays all of that content for the website users."}/> 
+                    
+
+                            </div>
+                        
+                        </div>
+                   
+                    
+                    
+
+
+                
+                </main>
+            </div>
+           
+
+        )
+      }
+      let Header =()=>{
+        return(
+            <header id ='head'>
+                <span  id='title1'><b>Pixelmatters</b> </span>
+                
+                <div id='box1'>              
+                    <a href="">Work</a>
+                    <a href="">Approach</a>
+                    <a href="">Culture</a>
+                    <a href="">Careeres</a>
+                    <a href="">Blog</a>
+                    </div>
+               
+             
+            </header>
+        )
+      }
+      function Button() {
+      return <button className='btx'>Get in touch</button>;
+    }
+   function Image1(){
+    return <div id='photo'> <img id='img1' src="./download1.jfif" alt="photo"/></div>
+   }
+   function Image2(){
+    return <div id='photo'> <img  src="./download2.jpeg" alt="photo"/></div>
+   }
+   function Image3(){
+    return <div id='photo'> <img id='img3' src="./download3.png" alt="photo"/></div>
+   }
+   function Image4(){
+    return <div id='photo'> <img id='img4' src="./download4.png" alt="photo"/></div>
+   }
+   let Typography =({text})=>{
+   
+        return( 
+        <span >{text}</span>
+    )
+}
+
+       const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(page())
+      </script>
+
+ </body>
+</html>
